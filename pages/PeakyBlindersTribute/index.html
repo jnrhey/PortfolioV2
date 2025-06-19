@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Shelby | Peaky Blinders</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/peaky-blinders-seeklogo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Video Background -->
+    <video id="video-background" autoplay muted loop playsinline>
+        <source src="assets/peaky_walk.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content-wrapper">
+        <!-- Audio Player -->
+        <div id="audioPlayer" class="audio-player">
+            <div class="audio-controls">
+                <audio id="bgMusic" src="assets/red_right_hand_BG.mp3" preload="auto"></audio>
+                <button id="playPauseBtn" class="btn">
+                    ▶️
+                </button>
+                <div class="volume-control">
+                    <input type="range" id="volumeSlider" class="form-range" min="0" max="1" step="0.1" value="0.2">
+                    <span id="volumeIcon">
+                        🔊
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Peaky Blinders</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#biography">Biography</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Video Background -->
+        <header id="home" class="container-fluid text-center">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 hero-content">
+                    <h1 class="display-1">Thomas Shelby</h1>
+                    <p class="lead">"By order of the Peaky Blinders"</p>
+                    <img src="assets/Tommys3.webp" alt="Thomas Shelby" class="img-fluid rounded shadow-lg" style="max-width: min(500px, 90%);">
+                </div>
+            </div>
+        </header>
+
+        <!-- Biography Section -->
+        <section id="biography" class="container py-5">
+            <h2 class="text-center mb-4">Biography</h2>
+            <div class="row">
+                <div class="col-12">
+                    <p class="lead text-center mb-4">Thomas "Tommy" Shelby OBE DCM MM MP is the leader of the Birmingham criminal gang Peaky Blinders and the patriarch of the Shelby Family.</p>
+                    
+                    <!-- Basic Information Cards -->
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Born</h3>
+                                    <p class="card-text">1890, Small Heath, Birmingham</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Occupation</h3>
+                                    <p class="card-text">Gang Leader, Businessman, MP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Military Awards</h3>
+                                    <p class="card-text">Distinguished Conduct Medal (DCM)<br>Military Medal (MM)<br>World War I Veteran</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Civilian Honors</h3>
+                                    <p class="card-text">Officer of the Order of the British Empire (OBE)<br>Awarded for distinguished service to British industry and the expansion of exports</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Family Section Title -->
+                    <h3 class="text-center mb-4 family-section-title">Family Members</h3>
+                    <p class="text-center family-tip mb-4">
+                        <span class="info-icon">ℹ</span>
+                        Click on any family member to learn more about their story
+                    </p>
+                    
+                    <!-- Family Cards -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-xl-10">
+                            <div class="card family-card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <!-- Siblings Column -->
+                                        <div class="col-md-6 family-column">
+                                            <h4 class="family-subtitle">Siblings & Aunt</h4>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#arthurModal">
+                                                <img src="assets/family/Arthur_Shelby.webp" alt="Arthur Shelby Jr." class="sibling-img">
+                                                <p>Arthur Shelby Jr. (brother)<br><small>Chairman & Head of Security<br>Senior Member of Peaky Blinders</small></p>
+                                            </div>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#johnModal">
+                                                <img src="assets/family/Johns3.webp" alt="John Shelby" class="sibling-img">
+                                                <p>John Shelby (brother)<br><small>Company Secretary<br>Third Command of Peaky Blinders</small></p>
+                                            </div>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#adaModal">
+                                                <img src="assets/family/Ada5.webp" alt="Ada Shelby" class="sibling-img">
+                                                <p>Ada Shelby (sister)<br><small>Head of Property and Acquisitions<br>Shelby Company Limited</small></p>
+                                            </div>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#pollyModal">
+                                                <img src="assets/family/Pollys4.webp" alt="Polly Gray" class="sibling-img">
+                                                <p>Polly Gray (aunt)<br><small>Company Treasurer & Matriarch<br>Chief Financial Advisor</small></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Wives and Children Column -->
+                                        <div class="col-md-6 family-column">
+                                            <h4 class="family-subtitle">Wives</h4>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#graceModal">
+                                                <img src="assets/family/Grace_Shelby.webp" alt="Grace Shelby" class="sibling-img">
+                                                <p>Grace Shelby (First Wife)<br><small>Former Crown Agent<br>Assassinated in Series 3</small></p>
+                                            </div>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#lizzieModal">
+                                                <img src="assets/family/Lizzieshelbys6.webp" alt="Lizzie Stark" class="sibling-img">
+                                                <p>Lizzie Stark (Second Wife)<br><small>Former Company Secretary<br>Lady of Arrow House</small></p>
+                                            </div>
+                                            
+                                            <h4 class="family-subtitle mt-4">Children</h4>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#dukeModal">
+                                                <img src="assets/family/Dukeshelbyy.webp" alt="Duke Shelby" class="sibling-img">
+                                                <p>Duke Shelby<br><small>First Born Son<br>Mother: Gypsy woman from wartime romance (1916)<br>Found during Season 6</small></p>
+                                            </div>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#charlesModal">
+                                                <img src="assets/family/Charles_Shelby_Series_6.webp" alt="Charles Shelby" class="sibling-img">
+                                                <p>Charles Shelby<br><small>Second Born Son<br>Mother: Grace Shelby</small></p>
+                                            </div>
+                                            <div class="family-member" role="button" data-bs-toggle="modal" data-bs-target="#rubyModal">
+                                                <img src="assets/family/Ruby_29.webp" alt="Ruby Shelby" class="sibling-img">
+                                                <p>Ruby Shelby<br><small>Daughter<br>Mother: Lizzie Stark</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Family Member Modals -->
+        <!-- Arthur Modal -->
+        <div class="modal fade" id="arthurModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Arthur Shelby Jr.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Arthur_Shelby.webp" alt="Arthur Shelby Jr." class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>The Eldest Shelby Brother</h4>
+                                <p>Arthur is the eldest of the Shelby siblings and serves as the Chairman of Shelby Company Limited. Despite his position, he often struggles with his violent tendencies and mental health issues.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Position: Chairman of Shelby Company Limited</li>
+                                    <li>Role: Head of Security</li>
+                                    <li>Gang Status: Senior Member of Peaky Blinders</li>
+                                    <li>Military Service: Former Sergeant Major</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- John Modal -->
+        <div class="modal fade" id="johnModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">John Shelby</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Johns3.webp" alt="John Shelby" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>The Third Shelby Brother</h4>
+                                <p>John is the third eldest Shelby sibling and one of the most loyal members of the Peaky Blinders. Known for his quick temper and skilled fighting abilities, he plays a crucial role in the family business.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Position: Company Secretary</li>
+                                    <li>Gang Status: Third in Command</li>
+                                    <li>Military Service: Former Army Private</li>
+                                    <li>Family: Married to Esme Lee</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ada Modal -->
+        <div class="modal fade" id="adaModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ada Shelby</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Ada5.webp" alt="Ada Shelby" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>The Shelby Sister</h4>
+                                <p>Ada is the only female Shelby sibling and initially distances herself from the family business. However, she later becomes an integral part of the company's expansion, especially in the United States.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Position: Head of Property and Acquisitions</li>
+                                    <li>Political Views: Former Communist</li>
+                                    <li>Residence: London, Later Boston</li>
+                                    <li>Family: Widow of Freddie Thorne</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Polly Modal -->
+        <div class="modal fade" id="pollyModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Polly Gray</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Pollys4.webp" alt="Polly Gray" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>The Matriarch</h4>
+                                <p>Elizabeth "Polly" Gray is the matriarch of the Shelby family and the treasurer of Shelby Company Limited. She ran the family business while the boys were away at war and continues to be a crucial advisor to Thomas.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Position: Company Treasurer & Chief Financial Advisor</li>
+                                    <li>Family Role: Aunt to the Shelby siblings</li>
+                                    <li>Special Abilities: Clairvoyant abilities</li>
+                                    <li>Notable Achievement: Ran the business during WWI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grace Modal -->
+        <div class="modal fade" id="graceModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Grace Shelby</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Grace_Shelby.webp" alt="Grace Shelby" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Thomas's First Wife</h4>
+                                <p>Grace Burgess Shelby initially worked as an undercover agent for the Crown but fell in love with Thomas. Their relationship evolved from enemies to lovers, eventually leading to marriage.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Background: Former Crown Agent</li>
+                                    <li>Marriage: Thomas's first wife</li>
+                                    <li>Children: Mother to Charles Shelby</li>
+                                    <li>Death: Assassinated in Series 3 by Italian mafia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lizzie Modal -->
+        <div class="modal fade" id="lizzieModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Lizzie Stark</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Lizzieshelbys6.webp" alt="Lizzie Stark" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Thomas's Second Wife</h4>
+                                <p>Lizzie's journey from a former prostitute to Thomas Shelby's wife and a respected member of the Shelby family showcases her resilience and adaptability. She becomes an essential part of both the family and the business.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Position: Former Company Secretary</li>
+                                    <li>Status: Lady of Arrow House</li>
+                                    <li>Children: Mother to Ruby Shelby</li>
+                                    <li>Character Development: From secretary to lady of the manor</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Duke Modal -->
+        <div class="modal fade" id="dukeModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Duke Shelby</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Dukeshelbyy.webp" alt="Duke Shelby" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Thomas's First Born Son</h4>
+                                <p>Duke Shelby is Thomas's illegitimate son from a wartime romance in 1916. He was discovered during the events of Season 6, bringing a new dynamic to the Shelby family.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Status: First Born Son of Thomas Shelby</li>
+                                    <li>Background: Born to a Gypsy mother during WWI</li>
+                                    <li>Introduction: Season 6</li>
+                                    <li>Skills: Natural aptitude for the family business</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charles Modal -->
+        <div class="modal fade" id="charlesModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Charles Shelby</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Charles_Shelby_Series_6.webp" alt="Charles Shelby" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Son of Thomas and Grace</h4>
+                                <p>Charles Shelby is the son of Thomas and his first wife Grace. Born into wealth and privilege, he represents the legitimate heir to the Shelby empire.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Parents: Thomas Shelby and Grace Shelby</li>
+                                    <li>Status: Second Born Son</li>
+                                    <li>Residence: Arrow House</li>
+                                    <li>Education: Privileged upbringing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ruby Modal -->
+        <div class="modal fade" id="rubyModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ruby Shelby</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/family/Ruby_29.webp" alt="Ruby Shelby" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Daughter of Thomas and Lizzie</h4>
+                                <p>Ruby is the daughter of Thomas and his second wife Lizzie. She inherited some of her father's Romani heritage and showed signs of having special abilities. She tragically passed away from tuberculosis in Series 6.</p>
+                                <h5>Key Information:</h5>
+                                <ul>
+                                    <li>Parents: Thomas Shelby and Lizzie Stark</li>
+                                    <li>Status: Deceased (Series 6, tuberculosis)</li>
+                                    <li>Heritage: Part Romani</li>
+                                    <li>Special Traits: Showed signs of second sight</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media Section -->
+        <section id="media" class="container py-5">
+            <h2 class="text-center mb-4">Media Gallery</h2>
+            <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 600px;">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100">
+                        <img src="assets/Peaky_Tommy_Shelby.webp" alt="Thomas Shelby Image 1" class="d-block w-100 rounded h-100" style="object-fit: contain;">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="assets/Peakyblinders4.webp" alt="Thomas Shelby Image 2" class="d-block w-100 rounded h-100" style="object-fit: contain;">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="assets/skynews-peaky-blinders-cillian-murphy_5659153.jpg" alt="Thomas Shelby Image 3" class="d-block w-100 rounded h-100" style="object-fit: contain;">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="assets/No_fcking_fightin.jpg" alt="Thomas Shelby Smoking" class="d-block w-100 rounded h-100" style="object-fit: contain;">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="assets/thomy_smoking.jpg" alt="By Order of the Peaky Blinders" class="d-block w-100 rounded h-100" style="object-fit: contain;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev" style="filter: invert(70%) sepia(38%) saturate(499%) hue-rotate(358deg) brightness(89%) contrast(86%);">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next" style="filter: invert(70%) sepia(38%) saturate(499%) hue-rotate(358deg) brightness(89%) contrast(86%);">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <!-- Carousel indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="container-fluid bg-dark text-light py-5">
+            <div class="container">
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                        <p>"Intelligence is a very valuable thing, innit, my friend? And usually it comes far too late."</p>
+                    </blockquote>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="container-fluid footer-light py-3 mb-5">
+            <div class="container text-center">
+                <p class="mb-0">&copy; 2025 Peaky Blinders Tribute | Created by Jan Rhey P. Paaño (BSCS 1-4)</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- JAVASCRIPTS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
